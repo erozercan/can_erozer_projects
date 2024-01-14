@@ -1,0 +1,78 @@
+Begin
+  Fun vbinomial vn
+    Fun fun vk
+      Push vn
+      Lookup
+      Push vk
+      Lookup
+      Equal
+      Push 0
+      Push vk
+      Lookup
+      Equal
+      Or
+      If
+        Begin
+          Push 1
+        End
+      Else
+        Begin
+          Begin
+            Push 1
+            Push vk
+            Lookup
+            Sub 2
+            Push 1
+            Push vn
+            Lookup
+            Sub 2
+            Push vbinomial
+            Lookup
+            Call
+            Call
+            Push vb1
+            Local
+            Pop 1
+            Begin
+              Push vk
+              Lookup
+              Push 1
+              Push vn
+              Lookup
+              Sub 2
+              Push vbinomial
+              Lookup
+              Call
+              Call
+              Push vb2
+              Local
+              Pop 1
+              Push vb2
+              Lookup
+              Push vb1
+              Lookup
+              Add 2
+            End
+          End
+        End
+      End
+    End
+    Push fun
+    Lookup
+  End
+  Push vbinomial
+  Lookup
+  Push vbinomial
+  Local
+  Pop 1
+  Push 5
+  Push 10
+  Push vbinomial
+  Lookup
+  Call
+  Call
+  Trace 1
+  Push ()
+End
+----------------interp result----------------
+["252"]

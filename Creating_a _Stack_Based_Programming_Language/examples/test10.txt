@@ -1,0 +1,63 @@
+Begin
+  Fun vloop vi
+    Push 0
+    Push vi
+    Lookup
+    Lte
+    If
+      Begin
+        Push ()
+        Trace 1
+        Push ()
+      End
+    Else
+      Begin
+        Begin
+          Push vi
+          Lookup
+          Push vx
+          Local
+          Pop 1
+          Begin
+            Push 1
+            Push vi
+            Lookup
+            Add 2
+            Push vy
+            Local
+            Pop 1
+            Begin
+              Push vx
+              Lookup
+              Push vy
+              Lookup
+              Trace 2
+              Push ()
+              Push v_
+              Local
+              Pop 1
+              Push 1
+              Push vi
+              Lookup
+              Sub 2
+              Push vloop
+              Lookup
+              Call
+            End
+          End
+        End
+      End
+    End
+  End
+  Push vloop
+  Lookup
+  Push vloop
+  Local
+  Pop 1
+  Push 20
+  Push vloop
+  Lookup
+  Call
+End
+----------------interp result----------------
+["()"; "1"; "2"; "2"; "3"; "3"; "4"; "4"; "5"; "5"; "6"; "6"; "7"; "7"; "8"; "8"; "9"; "9"; "10"; "10"; "11"; "11"; "12"; "12"; "13"; "13"; "14"; "14"; "15"; "15"; "16"; "16"; "17"; "17"; "18"; "18"; "19"; "19"; "20"; "20"; "21"]

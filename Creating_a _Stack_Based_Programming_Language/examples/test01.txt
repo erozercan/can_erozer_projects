@@ -1,0 +1,47 @@
+Begin
+  Fun vfact vn
+    Push 0
+    Push vn
+    Lookup
+    Lte
+    If
+      Begin
+        Push 1
+      End
+    Else
+      Begin
+        Push 1
+        Push vn
+        Lookup
+        Sub 2
+        Push vfact
+        Lookup
+        Call
+        Push vn
+        Lookup
+        Mul 2
+      End
+    End
+  End
+  Push vfact
+  Lookup
+  Push vfact
+  Local
+  Pop 1
+  Begin
+    Push 10
+    Push vfact
+    Lookup
+    Call
+    Push vx
+    Local
+    Pop 1
+    Push vx
+    Lookup
+    Trace 1
+    Push ()
+  End
+End
+
+----------------interp result----------------
+["3628800"]

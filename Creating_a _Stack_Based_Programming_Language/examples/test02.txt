@@ -1,0 +1,87 @@
+Begin
+  Fun viter vn
+    Fun fun vf
+      Fun fun vg
+        Push 0
+        Push vn
+        Lookup
+        Lte
+        If
+          Begin
+            Push 0
+            Push vg
+            Lookup
+            Call
+          End
+        Else
+          Begin
+            Push vg
+            Lookup
+            Push vf
+            Lookup
+            Push 1
+            Push vn
+            Lookup
+            Sub 2
+            Push viter
+            Lookup
+            Call
+            Call
+            Call
+            Push vf
+            Lookup
+            Call
+          End
+        End
+      End
+      Push fun
+      Lookup
+    End
+    Push fun
+    Lookup
+  End
+  Push viter
+  Lookup
+  Push viter
+  Local
+  Pop 1
+  Begin
+    Fun vpow vx
+      Begin
+        Push vx
+        Lookup
+        Trace 1
+        Push ()
+        Push v_
+        Local
+        Pop 1
+        Push vx
+        Lookup
+        Push vx
+        Lookup
+        Mul 2
+      End
+    End
+    Push vpow
+    Lookup
+    Push vpow
+    Local
+    Pop 1
+    Fun fun v_
+      Push 2
+    End
+    Push fun
+    Lookup
+    Push vpow
+    Lookup
+    Push 4
+    Push viter
+    Lookup
+    Call
+    Call
+    Call
+  End
+End
+----------------interp result----------------
+["256"; "16"; "4"; "2"]
+

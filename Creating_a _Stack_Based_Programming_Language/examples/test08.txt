@@ -1,0 +1,195 @@
+Begin
+  Push False
+  Push exn
+  Global
+  Pop 1
+  Try
+    Push 0
+    Push 10
+    Div 2
+    Push True
+    Push exn
+    Global
+    Pop 1
+  End
+  Push exn
+  Lookup
+  If
+    Pop 0
+  Else
+    Begin
+      Push 3
+      Push True
+      Push exn
+      Global
+      Pop 1
+    End
+  End
+  Push vx
+  Local
+  Pop 1
+  Push False
+  Push exn
+  Global
+  Pop 1
+  Try
+    Push vx
+    Lookup
+    Switch
+      Case 1
+        Begin
+          Push vx
+          Lookup
+          Push vx
+          Lookup
+          Add 2
+          Switch
+            Case 2
+              Begin
+                Push 1
+              End
+            Case 3
+              Begin
+                Push 2
+              End
+            Case 4
+              Begin
+                Push 3
+              End
+          End
+        End
+      Case 2
+        Begin
+          Push vx
+          Lookup
+          Push vx
+          Lookup
+          Add 2
+          Switch
+            Case 2
+              Begin
+                Push 1
+              End
+            Case 3
+              Begin
+                Push 2
+              End
+            Case 4
+              Begin
+                Push 3
+              End
+          End
+        End
+      Case 3
+        Begin
+          Push False
+          Push exn
+          Global
+          Pop 1
+          Try
+            Push vx
+            Lookup
+            Push vx
+            Lookup
+            Add 2
+            Switch
+              Case 2
+                Begin
+                  Push 1
+                End
+              Case 3
+                Begin
+                  Push 2
+                End
+              Case 4
+                Begin
+                  Push 3
+                End
+            End
+            Push True
+            Push exn
+            Global
+            Pop 1
+          End
+          Push exn
+          Lookup
+          If
+            Pop 0
+          Else
+            Begin
+              Push 44
+              Push True
+              Push exn
+              Global
+              Pop 1
+            End
+          End
+        End
+      Case 4
+        Begin
+          Push vx
+          Lookup
+          Push vx
+          Lookup
+          Add 2
+          Switch
+            Case 2
+              Begin
+                Push 1
+              End
+            Case 3
+              Begin
+                Push 2
+              End
+            Case 4
+              Begin
+                Push 3
+              End
+          End
+        End
+      Case 5
+        Begin
+          Push vx
+          Lookup
+          Push vx
+          Lookup
+          Add 2
+          Switch
+            Case 2
+              Begin
+                Push 1
+              End
+            Case 3
+              Begin
+                Push 2
+              End
+            Case 4
+              Begin
+                Push 3
+              End
+          End
+        End
+    End
+    Push True
+    Push exn
+    Global
+    Pop 1
+  End
+  Push exn
+  Lookup
+  If
+    Pop 0
+  Else
+    Begin
+      Push 33
+      Push True
+      Push exn
+      Global
+      Pop 1
+    End
+  End
+  Trace 1
+  Push ()
+End
+----------------interp result----------------
+["44"]

@@ -1,0 +1,71 @@
+Begin
+  Fun vgcd va
+    Fun fun vb
+      Push 0
+      Push va
+      Lookup
+      Equal
+      If
+        Begin
+          Push vb
+          Lookup
+        End
+      Else
+        Begin
+          Push va
+          Lookup
+          Push va
+          Lookup
+          Push vb
+          Lookup
+          Div 2
+          Push va
+          Lookup
+          Mul 2
+          Push vb
+          Lookup
+          Sub 2
+          Push vgcd
+          Lookup
+          Call
+          Call
+        End
+      End
+    End
+    Push fun
+    Lookup
+  End
+  Push vgcd
+  Lookup
+  Push vgcd
+  Local
+  Pop 1
+  Begin
+    Push 11
+    Push 77
+    Push vgcd
+    Lookup
+    Call
+    Call
+    Push 121
+    Push 77
+    Push vgcd
+    Lookup
+    Call
+    Call
+    Push 91
+    Push 39
+    Push vgcd
+    Lookup
+    Call
+    Call
+    Trace 3
+    Push ()
+    Push v_
+    Local
+    Pop 1
+    Push ()
+  End
+End
+----------------interp result----------------
+["11"; "11"; "13"]

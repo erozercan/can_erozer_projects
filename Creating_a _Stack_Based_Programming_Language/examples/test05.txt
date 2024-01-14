@@ -1,0 +1,228 @@
+Begin
+  Fun vpi vn
+    Begin
+      Push 1
+      Push vq
+      Local
+      Pop 1
+      Begin
+        Push 180
+        Push vr
+        Local
+        Pop 1
+        Begin
+          Push 60
+          Push vt
+          Local
+          Pop 1
+          Begin
+            Push 2
+            Push vj
+            Local
+            Pop 1
+            Begin
+              Fun vloop vn
+                Fun fun vq
+                  Fun fun vr
+                    Fun fun vt
+                      Fun fun vj
+                        Push 0
+                        Push vn
+                        Lookup
+                        Lte
+                        Not
+                        If
+                          Begin
+                            Begin
+                              Push 1
+                              Push vj
+                              Lookup
+                              Push 3
+                              Mul 2
+                              Add 2
+                              Push 2
+                              Push vj
+                              Lookup
+                              Push 3
+                              Mul 2
+                              Add 2
+                              Push 3
+                              Mul 3
+                              Push vu
+                              Local
+                              Pop 1
+                              Begin
+                                Push vt
+                                Lookup
+                                Push 5
+                                Mul 2
+                                Push vr
+                                Lookup
+                                Push 5
+                                Mul 2
+                                Push 12
+                                Push vj
+                                Lookup
+                                Push 27
+                                Mul 2
+                                Sub 2
+                                Push vq
+                                Lookup
+                                Mul 2
+                                Add 2
+                                Div 2
+                                Push vy
+                                Local
+                                Pop 1
+                                Begin
+                                  Push vy
+                                  Lookup
+                                  Trace 1
+                                  Push ()
+                                  Push v_
+                                  Local
+                                  Pop 1
+                                  Begin
+                                    Push vq
+                                    Lookup
+                                    Push vj
+                                    Lookup
+                                    Push 1
+                                    Push vj
+                                    Lookup
+                                    Push 2
+                                    Mul 2
+                                    Sub 2
+                                    Push 10
+                                    Mul 4
+                                    Push vq'
+                                    Local
+                                    Pop 1
+                                    Begin
+                                      Push vu
+                                      Lookup
+                                      Push vt
+                                      Lookup
+                                      Push vy
+                                      Lookup
+                                      Mul 2
+                                      Push vr
+                                      Lookup
+                                      Push 2
+                                      Push vj
+                                      Lookup
+                                      Push 5
+                                      Mul 2
+                                      Sub 2
+                                      Push vq
+                                      Lookup
+                                      Mul 2
+                                      Add 2
+                                      Sub 2
+                                      Push 10
+                                      Mul 3
+                                      Push vr'
+                                      Local
+                                      Pop 1
+                                      Begin
+                                        Push vu
+                                        Lookup
+                                        Push vt
+                                        Lookup
+                                        Mul 2
+                                        Push vt'
+                                        Local
+                                        Pop 1
+                                        Begin
+                                          Push 1
+                                          Push vj
+                                          Lookup
+                                          Add 2
+                                          Push vj'
+                                          Local
+                                          Pop 1
+                                          Push vj'
+                                          Lookup
+                                          Push vt'
+                                          Lookup
+                                          Push vr'
+                                          Lookup
+                                          Push vq'
+                                          Lookup
+                                          Push 1
+                                          Push vn
+                                          Lookup
+                                          Sub 2
+                                          Push vloop
+                                          Lookup
+                                          Call
+                                          Call
+                                          Call
+                                          Call
+                                          Call
+                                        End
+                                      End
+                                    End
+                                  End
+                                End
+                              End
+                            End
+                          End
+                        Else
+                          Begin
+                            Push ()
+                          End
+                        End
+                      End
+                      Push fun
+                      Lookup
+                    End
+                    Push fun
+                    Lookup
+                  End
+                  Push fun
+                  Lookup
+                End
+                Push fun
+                Lookup
+              End
+              Push vloop
+              Lookup
+              Push vloop
+              Local
+              Pop 1
+              Push vj
+              Lookup
+              Push vt
+              Lookup
+              Push vr
+              Lookup
+              Push vq
+              Lookup
+              Push vn
+              Lookup
+              Push vloop
+              Lookup
+              Call
+              Call
+              Call
+              Call
+              Call
+            End
+          End
+        End
+      End
+    End
+  End
+  Push vpi
+  Lookup
+  Push vpi
+  Local
+  Pop 1
+  Push 6
+  Push vpi
+  Lookup
+  Call
+End
+----------------interp result----------------
+["9"; "5"; "1"; "4"; "1"; "3"]

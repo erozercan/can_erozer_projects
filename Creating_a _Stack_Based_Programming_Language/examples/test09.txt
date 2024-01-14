@@ -1,0 +1,382 @@
+Begin
+  Fun vpair vx
+    Fun fun vy
+      Fun fun vz
+        Push vy
+        Lookup
+        Push vx
+        Lookup
+        Push vz
+        Lookup
+        Call
+        Call
+      End
+      Push fun
+      Lookup
+    End
+    Push fun
+    Lookup
+  End
+  Push vpair
+  Lookup
+  Push vpair
+  Local
+  Pop 1
+  Begin
+    Fun vfst vp
+      Fun fun vx
+        Fun fun vy
+          Push vx
+          Lookup
+        End
+        Push fun
+        Lookup
+      End
+      Push fun
+      Lookup
+      Push vp
+      Lookup
+      Call
+    End
+    Push vfst
+    Lookup
+    Push vfst
+    Local
+    Pop 1
+    Begin
+      Fun vsnd vp
+        Fun fun vx
+          Fun fun vy
+            Push vy
+            Lookup
+          End
+          Push fun
+          Lookup
+        End
+        Push fun
+        Lookup
+        Push vp
+        Lookup
+        Call
+      End
+      Push vsnd
+      Lookup
+      Push vsnd
+      Local
+      Pop 1
+      Begin
+        Fun vcons vh
+          Fun fun vt
+            Push vt
+            Lookup
+            Push vh
+            Lookup
+            Push vpair
+            Lookup
+            Call
+            Call
+            Push False
+            Push vpair
+            Lookup
+            Call
+            Call
+          End
+          Push fun
+          Lookup
+        End
+        Push vcons
+        Lookup
+        Push vcons
+        Local
+        Pop 1
+        Begin
+          Fun vhd vls
+            Push ()
+            Push vls
+            Lookup
+            Call
+            Push vsnd
+            Lookup
+            Call
+            Push vfst
+            Lookup
+            Call
+          End
+          Push vhd
+          Lookup
+          Push vhd
+          Local
+          Pop 1
+          Begin
+            Fun vtl vls
+              Push ()
+              Push vls
+              Lookup
+              Call
+              Push vsnd
+              Lookup
+              Call
+              Push vsnd
+              Lookup
+              Call
+            End
+            Push vtl
+            Lookup
+            Push vtl
+            Local
+            Pop 1
+            Begin
+              Fun vfrom vn
+                Fun fun v_
+                  Push 1
+                  Push vn
+                  Lookup
+                  Add 2
+                  Push vfrom
+                  Lookup
+                  Call
+                  Push vn
+                  Lookup
+                  Push vcons
+                  Lookup
+                  Call
+                  Call
+                End
+                Push fun
+                Lookup
+              End
+              Push vfrom
+              Lookup
+              Push vfrom
+              Local
+              Pop 1
+              Begin
+                Fun vfilter vf
+                  Fun fun vs
+                    Fun fun v_
+                      Begin
+                        Push vs
+                        Lookup
+                        Push vhd
+                        Lookup
+                        Call
+                        Push vhd
+                        Local
+                        Pop 1
+                        Begin
+                          Push vs
+                          Lookup
+                          Push vtl
+                          Lookup
+                          Call
+                          Push vtl
+                          Local
+                          Pop 1
+                          Push vhd
+                          Lookup
+                          Push vf
+                          Lookup
+                          Call
+                          If
+                            Begin
+                              Push vtl
+                              Lookup
+                              Push vf
+                              Lookup
+                              Push vfilter
+                              Lookup
+                              Call
+                              Call
+                              Push vhd
+                              Lookup
+                              Push vcons
+                              Lookup
+                              Call
+                              Call
+                            End
+                          Else
+                            Begin
+                              Push ()
+                              Push vtl
+                              Lookup
+                              Push vf
+                              Lookup
+                              Push vfilter
+                              Lookup
+                              Call
+                              Call
+                              Call
+                            End
+                          End
+                        End
+                      End
+                    End
+                    Push fun
+                    Lookup
+                  End
+                  Push fun
+                  Lookup
+                End
+                Push vfilter
+                Lookup
+                Push vfilter
+                Local
+                Pop 1
+                Begin
+                  Push 2
+                  Push vfrom
+                  Lookup
+                  Call
+                  Fun fun vx
+                    Push 0
+                    Push 2
+                    Push vx
+                    Lookup
+                    Div 2
+                    Push 2
+                    Mul 2
+                    Push vx
+                    Lookup
+                    Sub 2
+                    Equal
+                  End
+                  Push fun
+                  Lookup
+                  Push vfilter
+                  Lookup
+                  Call
+                  Call
+                  Push vevens
+                  Local
+                  Pop 1
+                  Begin
+                    Push 2
+                    Push vfrom
+                    Lookup
+                    Call
+                    Fun fun vx
+                      Push 0
+                      Push 2
+                      Push vx
+                      Lookup
+                      Div 2
+                      Push 2
+                      Mul 2
+                      Push vx
+                      Lookup
+                      Sub 2
+                      Equal
+                      Not
+                    End
+                    Push fun
+                    Lookup
+                    Push vfilter
+                    Lookup
+                    Call
+                    Call
+                    Push vodds
+                    Local
+                    Pop 1
+                    Begin
+                      Fun vprint_stream vn
+                        Fun fun vs
+                          Push 0
+                          Push vn
+                          Lookup
+                          Lte
+                          If
+                            Begin
+                              Push ()
+                              Trace 1
+                              Push ()
+                            End
+                          Else
+                            Begin
+                              Begin
+                                Push vs
+                                Lookup
+                                Push vhd
+                                Lookup
+                                Call
+                                Push vhd
+                                Local
+                                Pop 1
+                                Begin
+                                  Push vs
+                                  Lookup
+                                  Push vtl
+                                  Lookup
+                                  Call
+                                  Push vtl
+                                  Local
+                                  Pop 1
+                                  Begin
+                                    Push vhd
+                                    Lookup
+                                    Trace 1
+                                    Push ()
+                                    Push v_
+                                    Local
+                                    Pop 1
+                                    Push vtl
+                                    Lookup
+                                    Push 1
+                                    Push vn
+                                    Lookup
+                                    Sub 2
+                                    Push vprint_stream
+                                    Lookup
+                                    Call
+                                    Call
+                                  End
+                                End
+                              End
+                            End
+                          End
+                        End
+                        Push fun
+                        Lookup
+                      End
+                      Push vprint_stream
+                      Lookup
+                      Push vprint_stream
+                      Local
+                      Pop 1
+                      Begin
+                        Push vevens
+                        Lookup
+                        Push 10
+                        Push vprint_stream
+                        Lookup
+                        Call
+                        Call
+                        Push v_
+                        Local
+                        Pop 1
+                        Begin
+                          Push vodds
+                          Lookup
+                          Push 10
+                          Push vprint_stream
+                          Lookup
+                          Call
+                          Call
+                          Push v_
+                          Local
+                          Pop 1
+                          Push ()
+                        End
+                      End
+                    End
+                  End
+                End
+              End
+            End
+          End
+        End
+      End
+    End
+  End
+End
+----------------interp result----------------
+["()"; "21"; "19"; "17"; "15"; "13"; "11"; "9"; "7"; "5"; "3"; "()"; "20"; "18"; "16"; "14"; "12"; "10"; "8"; "6"; "4"; "2"]

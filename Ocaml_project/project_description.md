@@ -1,0 +1,1 @@
+Calculator Implementation with Binary Trees and Gtrees: The input of calculator is first stored in a binary tree with the help of parse functions to be later on transformed into a gtree. During transformation the values are changed to s-expression (symbolic expression) and stored in to a new created gtree. Finally, recursive traverse on gtree is done to complete the computation.
